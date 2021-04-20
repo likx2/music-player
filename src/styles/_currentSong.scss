@@ -1,0 +1,31 @@
+.currentSong {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+
+  &__cover {
+    width: 50vw;
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0 10px;
+    @media (max-width: 576px) {
+      font-size: 18px;
+    }
+  }
+  &__artist {
+    font-size: 18px;
+    font-weight: normal;
+    font-weight: 300;
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.songSample {
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: rgb(250, 224, 224);
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__cover {
+    width: 100%;
+    max-width: 60px;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &__text {
+    margin: 0 0 0 10px;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+  }
+  &__artist {
+    font-weight: 300;
+    font-size: 14px;
+  }
+  &--active {
+    background: rgb(255, 180, 180);
+    &:hover {
+      background: rgb(255, 180, 180);
+    }
+  }
+}

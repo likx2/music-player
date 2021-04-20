@@ -1,0 +1,36 @@
+.player {
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  //   justify-content: center;
+  padding: 30px 0 0;
+  flex-direction: column;
+
+  &__time-controls {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-column-gap: 20px;
+
+    input {
+      padding: 15px 0;
+      background-color: lightcoral;
+    }
+  }
+
+  &__play-controls {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 20px;
+
+    svg {
+      cursor: pointer;
+
+      &:nth-of-type(2) {
+        margin: 0 15px;
+      }
+    }
+  }
+}

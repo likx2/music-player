@@ -1,0 +1,26 @@
+@import "./mixins/scrollbars.scss";
+.library {
+  // display: none;
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  // overflow-y: scroll;
+  padding: 20px 0;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.2);
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 30px;
+    padding: 0 20px;
+  }
+  // @include scrollbars(10px, grey, grey);
+  @media (max-width: 768px) {
+    width: 60%;
+  }
+  @media (max-width: 567px) {
+    width: 100%;
+  }
+}
