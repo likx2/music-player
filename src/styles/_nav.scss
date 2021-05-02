@@ -1,0 +1,21 @@
+.nav {
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  &__btn {
+    padding: 10px 15px;
+    background: transparent;
+    border: 2px solid rgb(65, 65, 65);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background: rgb(65, 65, 65);
+      color: white;
+    }
+  }
+}

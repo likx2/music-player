@@ -1,29 +1,24 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-const Song = ({ currentSong, type, setCurrentSong, target, setTarget }) => {
+const Song = ({ currentSong, type, setCurrentSong, targetId, setTargetId }) => {
   const [isActiveSong, setIsActiveSong] = useState(false);
 
-  const songRef = useRef();
-
   useEffect(() => {
-    if (target === songRef.current) {
+    if (targetId === currentSong.id) {
       setIsActiveSong(true);
     } else {
       setIsActiveSong(false);
     }
-  }, [target]);
-
+  }, [targetId]);
   const changeSong = (e) => {
     if (type !== "songSample") return;
     setCurrentSong(currentSong);
-    setTarget(e.currentTarget);
-    setIsActiveSong(!isActiveSong);
+    setTargetId(currentSong.id);
   };
   return (
     <div
       onClick={changeSong}
       className={`${type} ${isActiveSong ? "songSample--active" : ""}`}
-      ref={songRef}
     >
       <div className={`${type}__inner`}>
         <img className={`${type}__cover`} src={currentSong.cover} alt="cover" />
@@ -33,6 +28,8 @@ const Song = ({ currentSong, type, setCurrentSong, target, setTarget }) => {
         </div>
       </div>
     </div>
+
+    // <p>{currentSong.key}</p>
   );
 };
 export default Song;

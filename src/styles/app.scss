@@ -10,10 +10,11 @@
 }
 body {
   font-family: "Mulish", sans-serif;
+  color: rgb(65, 65, 65);
 }
 
 @import "./player";
+@import "./nav";
 @import "./currentSong";
 @import "./library";
 @import "./songSample";
-

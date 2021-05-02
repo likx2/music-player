@@ -1,26 +1,47 @@
 @import "./mixins/scrollbars.scss";
 .library {
-  // display: none;
   position: fixed;
   width: 30%;
   height: 100%;
   left: 0;
   top: 0;
-  // overflow-y: scroll;
+  overflow-y: scroll;
   padding: 20px 0;
   background-color: #fff;
   box-shadow: 10px 10px 20px rgba($color: #000000, $alpha: 0.2);
-  &__title {
-    font-size: 32px;
-    font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-100%);
+  opacity: 0;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 0 30px;
     padding: 0 20px;
   }
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__close-btn {
+    font-size: 30px;
+    font-weight: 100;
+    border: none;
+    background: none;
+    color: rgb(148, 148, 148);
+    cursor: pointer;
+  }
+
   // @include scrollbars(10px, grey, grey);
   @media (max-width: 768px) {
     width: 60%;
   }
   @media (max-width: 567px) {
     width: 100%;
+  }
+  &--active {
+    transform: translateY(0%);
+    opacity: 1;
   }
 }
